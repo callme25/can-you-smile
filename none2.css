@@ -1,0 +1,215 @@
+
+.container {
+	height: 100vh; /* fills viewport height 100% */
+	/* gradient used as 50 50 background */
+	background: linear-gradient(
+		to bottom,
+		#d2eaf3 0%,
+		#d2eaf3 50%,
+		#f1d4bc 50%,
+		#f1d4bc 100%
+	);
+}
+
+.cat-container {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cat {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	background: #e7e8e8;
+	border: 2px solid #000;
+}
+
+.ear {
+	position: absolute;
+	top: -20px;
+	width: 40px;
+	height: 40px;
+	background: #e7e8e8;
+	border: 2px solid #000;
+	transform: rotate(45deg);
+}
+.ear.left {
+	left: 9px;
+}
+.ear.right {
+	right: 9px;
+}
+.inner-ear {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #000;
+	background: #ac8e8d;
+	top: 9px;
+	left: 9px;
+}
+
+.eye {
+	position: absolute;
+	background: #fff;
+	border: 2px solid #000;
+	width: 30px;
+	height: 30px;
+}
+.eye.left {
+	top: 25px;
+	left: 25px;
+}
+.eye.right {
+	top: 25px;
+	right: 25px;
+}
+
+.pupil {
+	position: absolute;
+	top: 9px;
+	left: 8px;
+	width: 10px;
+	height: 10px;
+	background: #000;
+	animation: eyeMovement 8s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.paw {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #000;
+	bottom: 0;
+	background: #fff;
+}
+.paw.left {
+	left: 10px;
+	animation: paw1 4s infinite;
+	animation-timing-function: ease-in-out;
+}
+.paw.right {
+	right: 10px;
+	animation: paw2 5s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.nose {
+	position: absolute;
+	top: 65px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px solid #000;
+	background: #ac8e8d;
+	width: 15px;
+	height: 15px;
+}
+
+.vertical-line {
+	position: absolute;
+	width: 2px;
+	height: 18px;
+	background: #000;
+	top: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.tail {
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	background: #e7e8e8;
+	border: 2px solid #000;
+	right: -90px;
+	bottom: 0;
+}
+.tail-tip {
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 25px;
+	border-left: 2px solid #000;
+	background: #fff;
+}
+
+@keyframes paw1 {
+	0% {
+		bottom: 0px;
+	}
+	10% {
+		bottom: 3px;
+	}
+	25% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+
+@keyframes paw2 {
+	0% {
+		bottom: 0px;
+	}
+	50% {
+		bottom: 0;
+	}
+	60% {
+		bottom: 3px;
+	}
+	75% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+
+@keyframes eyeMovement {
+	0% {
+		top: 9px;
+		left: 8px;
+	}
+	20% {
+		top: 9px;
+		left: 8px;
+	}
+	25% {
+		top: 12px;
+		left: 12px;
+	}
+	40% {
+		top: 12px;
+		left: 12px;
+	}
+	50% {
+		top: 12px;
+		left: 5px;
+	}
+	65% {
+		top: 12px;
+		left: 5px;
+	}
+	70% {
+		top: 6px;
+		left: 5px;
+	}
+	85% {
+		top: 6px;
+		left: 5px;
+	}
+	90% {
+		top: 9px;
+		left: 8px;
+	}
+	100% {
+		top: 9px;
+		left: 8px;
+	}
+}
